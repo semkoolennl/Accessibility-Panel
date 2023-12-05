@@ -1,0 +1,6 @@
+[submodule "api"]
+	path = api
+	url = https://github.com/joren-dev/Accessibility-Panel
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/semkoolennl/Accessibility-Panel-Nextjs
