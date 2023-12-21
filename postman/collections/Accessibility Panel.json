@@ -1,0 +1,2375 @@
+{
+	"info": {
+		"_postman_id": "718834c3-213d-4caf-bb4f-5b566696b9ed",
+		"name": "Accessibility Panel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "28809449-718834c3-213d-4caf-bb4f-5b566696b9ed"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "changepassword",
+					"item": [
+						{
+							"name": "Change password.",
+							"id": "78ed8657-6270-408c-b7c4-e42b0346aa16",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"oldPassword\": \"<string>\",\n  \"newPassword\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/account/changepassword",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account",
+										"changepassword"
+									]
+								},
+								"description": "Changes the password of the currently logged in user."
+							},
+							"response": [
+								{
+									"id": "9b306b8e-530a-4b3e-893e-561694265cf8",
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"oldPassword\": \"<string>\",\n  \"newPassword\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/account/changepassword",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"account",
+												"changepassword"
+											]
+										},
+										"description": "Changes the password of the currently logged in user."
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "a8c6e63f-44b5-4ca7-84d4-25fb551c0cd0",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"oldPassword\": \"<string>\",\n  \"newPassword\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/account/changepassword",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"account",
+												"changepassword"
+											]
+										},
+										"description": "Changes the password of the currently logged in user."
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "acfd2265-260e-416d-8c4c-d92081c7507c"
+				},
+				{
+					"name": "changeemail",
+					"item": [
+						{
+							"name": "Change email address.",
+							"id": "ee01fc54-ae34-4ad8-8fa5-c9c26ce58a7c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/account/changeemail?email=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account",
+										"changeemail"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "<string>"
+										}
+									]
+								},
+								"description": "Changes the email address of the currently logged in user."
+							},
+							"response": [
+								{
+									"id": "db6003c6-d3b6-4f6f-8071-6b6ccd6a2af1",
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/account/changeemail?email=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"account",
+												"changeemail"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "<string>"
+												}
+											]
+										},
+										"description": "Changes the email address of the currently logged in user."
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"id\": \"<string>\",\n    \"email\": \"<string>\",\n    \"profileType\": \"<string>\",\n    \"roles\": \"<string>\",\n    \"createdAt\": \"<dateTime>\"\n  }\n}"
+								},
+								{
+									"id": "0f91ae85-a87a-4072-9063-11fe47a8708a",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/account/changeemail?email=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"account",
+												"changeemail"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "<string>"
+												}
+											]
+										},
+										"description": "Changes the email address of the currently logged in user."
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "7fe15223-6938-44f5-8b56-a4d5aaf00f54"
+				},
+				{
+					"name": "account",
+					"item": [
+						{
+							"name": "Delete account.",
+							"id": "e94723fd-5b19-4b6a-98bb-b913c3c0acd7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/account/account",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account",
+										"account"
+									]
+								},
+								"description": "Deletes the account of the currently logged in user."
+							},
+							"response": [
+								{
+									"id": "2ca499f0-a4c8-495b-bfae-8cdd818ec518",
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/account/account",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"account",
+												"account"
+											]
+										},
+										"description": "Deletes the account of the currently logged in user."
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "57d1ba55-d322-4df6-a2ea-800435e4344c",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/account/account",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"account",
+												"account"
+											]
+										},
+										"description": "Deletes the account of the currently logged in user."
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "ba0a2fc2-d0bb-4e5e-8f5b-7572e2a9f4c8"
+				}
+			],
+			"id": "33e84f5d-4116-48bb-b71a-bbbfb651f329"
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "token",
+					"item": [
+						{
+							"name": "basic",
+							"item": [
+								{
+									"name": "Authenticates a user and returns a JWT-Token.",
+									"id": "71bdc05f-7670-45dd-8d19-fa92aad4964e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<email>\",\n  \"password\": \"<string>\",\n  \"portal\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/token/basic",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"token",
+												"basic"
+											]
+										},
+										"description": "This endpoint authenticates a user and returns a JWT-Token if the credentials are valid."
+									},
+									"response": [
+										{
+											"id": "f6b3bae2-179f-4708-92d6-f2f4c3e827eb",
+											"name": "Success! Returns a JWT-Token.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"<email>\",\n  \"password\": \"<string>\",\n  \"portal\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/token/basic",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"token",
+														"basic"
+													]
+												},
+												"description": "This endpoint authenticates a user and returns a JWT-Token if the credentials are valid."
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"token\": {\n      \"accessToken\": \"<string>\",\n      \"accessTokenExpiresAt\": \"<dateTime>\",\n      \"refreshToken\": \"<string>\",\n      \"refreshTokenExpiresAt\": \"<dateTime>\"\n    },\n    \"user\": {\n      \"id\": \"<string>\",\n      \"email\": \"<string>\",\n      \"profileType\": \"<string>\",\n      \"roles\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  }\n}"
+										},
+										{
+											"id": "70886523-0ab8-48ea-925e-620f8e4fd0a5",
+											"name": "Invalid credentials.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"<email>\",\n  \"password\": \"<string>\",\n  \"portal\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/token/basic",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"token",
+														"basic"
+													]
+												},
+												"description": "This endpoint authenticates a user and returns a JWT-Token if the credentials are valid."
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "94251021-b930-4aa5-a52d-7bd6f0f7ade1"
+						},
+						{
+							"name": "refresh",
+							"item": [
+								{
+									"name": "Refreshes a JWT-Token.",
+									"id": "bb783f22-6134-4ecc-9787-52213e580904",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"refreshToken\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/token/refresh",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"token",
+												"refresh"
+											]
+										},
+										"description": "This endpoint refreshes a JWT-Token if the refresh token is valid."
+									},
+									"response": [
+										{
+											"id": "a4cf8bed-aff3-444b-a2c9-9106fdc63873",
+											"name": "Success! Returns a refreshed JWT-Token.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"refreshToken\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/token/refresh",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"token",
+														"refresh"
+													]
+												},
+												"description": "This endpoint refreshes a JWT-Token if the refresh token is valid."
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"expiresAt\": \"<dateTime>\",\n    \"token\": \"<string>\"\n  }\n}"
+										},
+										{
+											"id": "cfda12cb-b48a-4408-acd3-75d37ad81938",
+											"name": "Invalid refresh token.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"refreshToken\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/token/refresh",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"token",
+														"refresh"
+													]
+												},
+												"description": "This endpoint refreshes a JWT-Token if the refresh token is valid."
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "2a6e307b-c7c4-4ad1-a32f-9bb0ccc44282"
+						}
+					],
+					"id": "95998518-f797-467a-b534-8c153f3215b3"
+				},
+				{
+					"name": "register",
+					"item": [
+						{
+							"name": "basic",
+							"item": [
+								{
+									"name": "Registers a new user.",
+									"id": "1a787cf3-a781-4c65-a168-554f281ecefb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"emailAddress\": \"<email>\",\n  \"password\": \"<string>\",\n  \"portal\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/register/basic",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"register",
+												"basic"
+											]
+										},
+										"description": "This endpoint registers a new user."
+									},
+									"response": [
+										{
+											"id": "190fbfb0-f670-42d3-8dba-b2cbb8f52d05",
+											"name": "Returns the newly created user.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"emailAddress\": \"<email>\",\n  \"password\": \"<string>\",\n  \"portal\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/register/basic",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"register",
+														"basic"
+													]
+												},
+												"description": "This endpoint registers a new user."
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"token\": {\n      \"accessToken\": \"<string>\",\n      \"accessTokenExpiresAt\": \"<dateTime>\",\n      \"refreshToken\": \"<string>\",\n      \"refreshTokenExpiresAt\": \"<dateTime>\"\n    },\n    \"user\": {\n      \"id\": \"<string>\",\n      \"email\": \"<string>\",\n      \"profileType\": \"<string>\",\n      \"roles\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  }\n}"
+										},
+										{
+											"id": "d262083f-e725-4bf2-a81e-42d98410819f",
+											"name": "The request is invalid.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"emailAddress\": \"<email>\",\n  \"password\": \"<string>\",\n  \"portal\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/register/basic",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"register",
+														"basic"
+													]
+												},
+												"description": "This endpoint registers a new user."
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": null
+										},
+										{
+											"id": "40b2a92f-99e2-477d-ae6e-8be45df63a35",
+											"name": "A user with this email or username already exists.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"emailAddress\": \"<email>\",\n  \"password\": \"<string>\",\n  \"portal\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/register/basic",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"register",
+														"basic"
+													]
+												},
+												"description": "This endpoint registers a new user."
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "49cb6bfa-e1d6-468c-84b3-981915fb6066"
+						}
+					],
+					"id": "cf98f414-13db-467b-9f53-95be40b1b7e3"
+				}
+			],
+			"id": "abe1be88-3a59-47dc-9252-5a1df5e0c1e1"
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "profile",
+					"item": [
+						{
+							"name": "Returns the company profile.",
+							"id": "3d8cc433-7550-40aa-b4b8-65289fe7c8e6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/company/profile",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										"profile"
+									]
+								},
+								"description": "This endpoint returns the company profile of the currently logged in user.\r\n\r\n\r\nIf no profile is found, a 404 error is returned.\r\n\r\nIf the user is not a company user, a 400 error is returned."
+							},
+							"response": [
+								{
+									"id": "9cb21b9e-a775-42e9-9cc7-0f8ab8087f1c",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "This endpoint returns the company profile of the currently logged in user.\r\n\r\n\r\nIf no profile is found, a 404 error is returned.\r\n\r\nIf the user is not a company user, a 400 error is returned."
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"userId\": \"<string>\",\n    \"profileId\": \"<string>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"companyId\": \"<string>\"\n  }\n}"
+								},
+								{
+									"id": "2207493d-01e3-457d-9d93-7f539b54015f",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "This endpoint returns the company profile of the currently logged in user.\r\n\r\n\r\nIf no profile is found, a 404 error is returned.\r\n\r\nIf the user is not a company user, a 400 error is returned."
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "6c65c883-d5af-403f-9fbd-21f233d45f60",
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "This endpoint returns the company profile of the currently logged in user.\r\n\r\n\r\nIf no profile is found, a 404 error is returned.\r\n\r\nIf the user is not a company user, a 400 error is returned."
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "93460db5-a290-42aa-8b60-1b7e2966eefc",
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "This endpoint returns the company profile of the currently logged in user.\r\n\r\n\r\nIf no profile is found, a 404 error is returned.\r\n\r\nIf the user is not a company user, a 400 error is returned."
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Creates a new company profile.",
+							"id": "96c32fb6-e125-4410-8bc6-f429da4850ec",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/company/profile",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										"profile"
+									]
+								},
+								"description": "Creates a new company profile for the currently logged in user.\r\n\r\nIf a profile already exists, a 400 error is returned."
+							},
+							"response": [
+								{
+									"id": "29c1513e-8a0e-4f4d-9b65-7944aa12dec1",
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "Creates a new company profile for the currently logged in user.\r\n\r\nIf a profile already exists, a 400 error is returned."
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"userId\": \"<string>\",\n    \"profileId\": \"<string>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"companyId\": \"<string>\"\n  }\n}"
+								},
+								{
+									"id": "db6cd8c0-a1d8-4950-a2db-983c0dcea2b6",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "Creates a new company profile for the currently logged in user.\r\n\r\nIf a profile already exists, a 400 error is returned."
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "03582818-7425-4c00-865f-9f995a245140",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "Creates a new company profile for the currently logged in user.\r\n\r\nIf a profile already exists, a 400 error is returned."
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Partially update company profile.",
+							"id": "30f0fcf6-d0ad-42d2-95a8-e5dc9ef7c9b6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/company/profile",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										"profile"
+									]
+								},
+								"description": "Partially updates the company profile of the currently logged in user.\r\n\r\nEmail address has to be updated using the /profile/email endpoint."
+							},
+							"response": [
+								{
+									"id": "284476a1-818e-4f6a-9f97-40944ad7daca",
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "Partially updates the company profile of the currently logged in user.\r\n\r\nEmail address has to be updated using the /profile/email endpoint."
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"userId\": \"<string>\",\n    \"profileId\": \"<string>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"companyId\": \"<string>\"\n  }\n}"
+								},
+								{
+									"id": "fdc950b5-d0d1-435c-8063-4458fb03de90",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "Partially updates the company profile of the currently logged in user.\r\n\r\nEmail address has to be updated using the /profile/email endpoint."
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "5ab1dcb0-ca03-426c-8d9e-4f0d22912a11",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "Partially updates the company profile of the currently logged in user.\r\n\r\nEmail address has to be updated using the /profile/email endpoint."
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "c91ba357-09a1-4443-b5f4-6de1383fa71f",
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/company/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"company",
+												"profile"
+											]
+										},
+										"description": "Partially updates the company profile of the currently logged in user.\r\n\r\nEmail address has to be updated using the /profile/email endpoint."
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "80850da7-99ff-4592-9d1f-cb2cb2d5debb"
+				}
+			],
+			"id": "f58a5e38-1227-46c8-8cf3-7017bd4ecd89"
+		},
+		{
+			"name": "panel",
+			"item": [
+				{
+					"name": "profile",
+					"item": [
+						{
+							"name": "Returns the panelmember profile.",
+							"id": "861ce5b3-1ced-4758-99b3-5c9f1b677a4f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/panel/profile",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"panel",
+										"profile"
+									]
+								},
+								"description": "This endpoint returns the panelmember profile of the currently logged in user."
+							},
+							"response": [
+								{
+									"id": "4f18715a-6574-408a-a041-c716496f3dae",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/panel/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"panel",
+												"profile"
+											]
+										},
+										"description": "This endpoint returns the panelmember profile of the currently logged in user."
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"userId\": \"<string>\",\n    \"profileId\": \"<string>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"specialDataId\": \"<string>\",\n    \"phoneNumber\": \"<string>\",\n    \"postalCode\": \"<string>\"\n  }\n}"
+								},
+								{
+									"id": "e8d9b5a4-0bb8-4b1f-a487-044f0a1fbd88",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/panel/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"panel",
+												"profile"
+											]
+										},
+										"description": "This endpoint returns the panelmember profile of the currently logged in user."
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "ada66596-af3d-4ff5-b334-9a780406f7bb",
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/panel/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"panel",
+												"profile"
+											]
+										},
+										"description": "This endpoint returns the panelmember profile of the currently logged in user."
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Creates a new panelmember profile.",
+							"id": "65e1877c-0488-4b78-94b7-0bbb63c05f61",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"postalCode\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/panel/profile",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"panel",
+										"profile"
+									]
+								},
+								"description": "Creates a new panelmember profile for the currently logged in user.\r\n\r\nIf a profile already exists, a 400 error is returned."
+							},
+							"response": [
+								{
+									"id": "1438cb25-9c4c-4237-83dd-ea0586ee9351",
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"postalCode\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/panel/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"panel",
+												"profile"
+											]
+										},
+										"description": "Creates a new panelmember profile for the currently logged in user.\r\n\r\nIf a profile already exists, a 400 error is returned."
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"userId\": \"<string>\",\n    \"profileId\": \"<string>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"specialDataId\": \"<string>\",\n    \"phoneNumber\": \"<string>\",\n    \"postalCode\": \"<string>\"\n  }\n}"
+								},
+								{
+									"id": "129bee75-817a-43e5-baa5-4bb1d9f29efd",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"postalCode\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/panel/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"panel",
+												"profile"
+											]
+										},
+										"description": "Creates a new panelmember profile for the currently logged in user.\r\n\r\nIf a profile already exists, a 400 error is returned."
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "983c1127-e5b1-46b0-9de1-fe7d0c8bce70",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"postalCode\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/panel/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"panel",
+												"profile"
+											]
+										},
+										"description": "Creates a new panelmember profile for the currently logged in user.\r\n\r\nIf a profile already exists, a 400 error is returned."
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Partially update panelmember profile.",
+							"id": "dc5c3d46-06eb-4f2c-9aa1-c49cdb9d4227",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"postalCode\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/panel/profile",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"panel",
+										"profile"
+									]
+								},
+								"description": "Partially updates the panelmember profile of the currently logged in user.\r\n\r\nEmail address has to be updated using the /profile/email endpoint."
+							},
+							"response": [
+								{
+									"id": "fdf4adfa-bc2c-4201-97df-1599516bfe31",
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"postalCode\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/panel/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"panel",
+												"profile"
+											]
+										},
+										"description": "Partially updates the panelmember profile of the currently logged in user.\r\n\r\nEmail address has to be updated using the /profile/email endpoint."
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"userId\": \"<string>\",\n    \"profileId\": \"<string>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"specialDataId\": \"<string>\",\n    \"phoneNumber\": \"<string>\",\n    \"postalCode\": \"<string>\"\n  }\n}"
+								},
+								{
+									"id": "053bb961-c38d-495d-a4e9-a48a352d625e",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"postalCode\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/panel/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"panel",
+												"profile"
+											]
+										},
+										"description": "Partially updates the panelmember profile of the currently logged in user.\r\n\r\nEmail address has to be updated using the /profile/email endpoint."
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "62a9a67a-6637-490f-967b-18c25c383bf9",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"postalCode\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/panel/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"panel",
+												"profile"
+											]
+										},
+										"description": "Partially updates the panelmember profile of the currently logged in user.\r\n\r\nEmail address has to be updated using the /profile/email endpoint."
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"id": "e87e2c6a-3c73-4650-af2c-9ab3ac96a875",
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstname\": \"<string>\",\n  \"lastname\": \"<string>\",\n  \"postalCode\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/panel/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"panel",
+												"profile"
+											]
+										},
+										"description": "Partially updates the panelmember profile of the currently logged in user.\r\n\r\nEmail address has to be updated using the /profile/email endpoint."
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "284f0e29-d035-4d4a-b9aa-fdafe12820b2"
+				}
+			],
+			"id": "bd17c9c9-4f26-488e-b96d-c78311db9abb"
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "{user_id}",
+							"item": [
+								{
+									"name": "/admin/users/:user_id",
+									"id": "95614ac4-3d58-464d-820b-42ffe0853910",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/admin/users/:user_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"users",
+												":user_id"
+											],
+											"variable": [
+												{
+													"id": "6c269f00-427b-4a3e-a90f-470edf9e3fd0",
+													"key": "user_id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "515aac79-338c-4b0c-aeda-8471013eae29",
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/users/:user_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"users",
+														":user_id"
+													],
+													"variable": [
+														{
+															"id": "6c269f00-427b-4a3e-a90f-470edf9e3fd0",
+															"key": "user_id",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"id\": \"<string>\",\n    \"email\": \"<string>\",\n    \"profileType\": \"<string>\",\n    \"roles\": \"<string>\",\n    \"createdAt\": \"<dateTime>\"\n  }\n}"
+										},
+										{
+											"id": "8a2014d6-0878-441b-a2d1-24190ee8b835",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/users/:user_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"users",
+														":user_id"
+													],
+													"variable": [
+														{
+															"id": "6c269f00-427b-4a3e-a90f-470edf9e3fd0",
+															"key": "user_id",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": null
+										},
+										{
+											"id": "fe9a8ce4-8904-4c00-8dae-c97a7dc2c62e",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/users/:user_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"users",
+														":user_id"
+													],
+													"variable": [
+														{
+															"id": "6c269f00-427b-4a3e-a90f-470edf9e3fd0",
+															"key": "user_id",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "/admin/users/:user_id",
+									"id": "5e9242f2-204f-4baf-a7dd-3ac530e9d3e0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/admin/users/:user_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"users",
+												":user_id"
+											],
+											"variable": [
+												{
+													"id": "62b8a1c4-47e1-405e-afa6-c050248c91c3",
+													"key": "user_id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "bd202825-adbf-4660-aab8-c603081ac080",
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/users/:user_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"users",
+														":user_id"
+													],
+													"variable": [
+														{
+															"id": "62b8a1c4-47e1-405e-afa6-c050248c91c3",
+															"key": "user_id",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"id\": \"<string>\",\n    \"email\": \"<string>\",\n    \"profileType\": \"<string>\",\n    \"roles\": \"<string>\",\n    \"createdAt\": \"<dateTime>\"\n  }\n}"
+										},
+										{
+											"id": "56ff0b50-c060-4dec-a9dc-92b3be94341d",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/users/:user_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"users",
+														":user_id"
+													],
+													"variable": [
+														{
+															"id": "62b8a1c4-47e1-405e-afa6-c050248c91c3",
+															"key": "user_id",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": null
+										},
+										{
+											"id": "89f79194-88a8-4584-aec6-52c6d0f442bb",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/users/:user_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"users",
+														":user_id"
+													],
+													"variable": [
+														{
+															"id": "62b8a1c4-47e1-405e-afa6-c050248c91c3",
+															"key": "user_id",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "ab0b049b-0b08-45b7-8089-578730e945f0"
+						},
+						{
+							"name": "/admin/users",
+							"id": "6f917d7c-c822-481c-a2b2-de895ef6ee49",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/admin/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "bf27b53c-4ce8-4226-8e39-98cbdc020310",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/admin/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": \"<boolean>\",\n  \"data\": [\n    {\n      \"id\": \"<string>\",\n      \"email\": \"<string>\",\n      \"profileType\": \"<string>\",\n      \"roles\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"email\": \"<string>\",\n      \"profileType\": \"<string>\",\n      \"roles\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  ]\n}"
+								},
+								{
+									"id": "8fcca121-317d-4878-8b7b-ed8c3c8d5c4d",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/admin/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"users"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "7b763240-039b-4ae9-95b7-b234ef5d1ab1"
+				}
+			],
+			"id": "5194cbf8-cb97-4db8-b14c-9adffc34a9c2"
+		}
+	],
+	"variable": [
+		{
+			"id": "1b6d8141-089e-4e76-9050-4aa59f3be690",
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
